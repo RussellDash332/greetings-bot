@@ -20,4 +20,5 @@ jobs:
           python-version: 3.9
       - name: Send sticker
         run: |-
+          pip install -r requirements.txt
           python evening.py
