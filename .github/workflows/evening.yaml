@@ -1,0 +1,23 @@
+name: Good evening!
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 7,10 * * *" # Every 3 PM and 6 PM SGT
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v2.3.4
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Send sticker
+        run: |-
+          python evening.py
