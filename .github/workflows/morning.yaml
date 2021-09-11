@@ -22,3 +22,6 @@ jobs:
         run: |-
           pip install -r requirements.txt
           python morning.py
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          CHAT: ${{ secrets.CHAT }}
