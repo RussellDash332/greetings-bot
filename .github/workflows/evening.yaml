@@ -22,6 +22,3 @@ jobs:
         run: |-
           pip install -r requirements.txt
           python evening.py
-        env:
-          TOKEN: ${{ secrets.TOKEN }}
-          CHAT: ${{ secrets.CHAT }}
