@@ -4,7 +4,7 @@ import requests, emoji, os
 ## from env import TOKEN, CHAT
 
 # Uncomment this instead if you want to run this locally
-TOKEN, CHAT = os.environ['TOKEN'], os.enviton['CHAT']
+TOKEN, CHAT = os.environ['TOKEN'], os.environ['CHAT']
 
 # Yes, you may use these stickers
 good_morning = "CAACAgUAAxkBAAM9YTc0SsvypOPzN4VA6r7uJCV9eukAAgEAA8dbrQPU7mkXJrJHPSAE"
