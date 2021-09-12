@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "55 6,9 * * *" # Every 3 PM and 6 PM SGT (5 minutes buffer)
+    - cron: "55 7 * * *" # Every 4 PM SGT (5 minutes buffer)
 
 jobs:
   build:
