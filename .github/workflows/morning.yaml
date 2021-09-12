@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 0 * * *" # Every 8 AM SGT
+    - cron: "45 23 * * *" # Every 8 AM SGT (15 minutes buffer)
 
 jobs:
   build:
@@ -18,6 +18,13 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
+      - name: pip cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
       - name: Send sticker
         run: |-
           pip install -r requirements.txt
